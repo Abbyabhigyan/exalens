@@ -1,0 +1,17 @@
+The function starts by initializing a hashmap with each requirement as a key and an array of "Infinity" values, with the length of the array matching the number of blocks. 
+This hashmap will be used to store the distance between each block and the nearest requirement.
+
+Then, the function enters two nested loops. The first loop iterates through the blocks and the second loop iterates through the requirements. 
+For each block and requirement, the function checks if the current block has the current requirement. 
+If it does, the distance for that block and requirement in the hashmap is set to 0. If not, the distance is set to the previous block's distance plus 1.
+
+After this, the function enters another loop which iterates through the blocks in reverse order. 
+It again loops through the requirements and updates the distance in the hashmap to be the minimum of the current distance or the next block's distance plus 1.
+
+Then the function creates an empty array named "result", and loops through the blocks.
+For each block, it finds the maximum distance from that block to any of the requirements and stores it in the "result" array.
+
+Finally, the function finds the block that has the minimum distance to all requirements by finding the index of the minimum value in the "result" array and returns it.
+
+Overall, the function iterates through the blocks and requirements multiple times, updating the distance in the hashmap each 
+time and using this information to find the block that is closest to all the requirements.
